@@ -17,9 +17,9 @@ int main() {
 	std::cout << "\t*************************         *************************\n";
 	std::cout << "\t      12 hour clock                      24 hour clock\n";
 	std::cout << "\t       ";
-	std::cout << display12hours(timeHour, timeMinute, timeSecond);
+	display12hours(timeHour, timeMinute, timeSecond);
 	std::cout << "\t                    ";
-	std::cout << display24hours(timeHour, timeMinute, timeSecond);
+	display24hours(timeHour, timeMinute, timeSecond);
 	std::cout << " \n";
 	std::cout << "\t*************************         *************************\n\n";
 
