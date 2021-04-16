@@ -3,9 +3,9 @@
 #include <ctime>
 #include <time.h>
 
-int addOneHour(int timeHour, int timeMinute, int timeSecond);
-int addOneMinute(int timeHour, int timeMinute, int timeSecond);
-int addOneSecond(int timeHour, int timeMinute, int timeSecond);
+int addOneHour(int &timeHour, int timeMinute, int timeSecond);
+int addOneMinute(int timeHour, int &timeMinute, int timeSecond);
+int addOneSecond(int timeHour, int timeMinute, int &timeSecond);
 int display12hours(int& timeHour, int& timeMinute, int& timeSecond);
 int display24hours(int& timeHour, int& timeMinute, int& timeSecond);
 
@@ -70,7 +70,7 @@ int main() {
 	return 0;
 }
 
-int addOneHour(int timeHour, int timeMinute, int timeSecond) {
+int addOneHour(int &timeHour, int timeMinute, int timeSecond) {
 	timeHour = timeHour + 1;
 	std::cout << "\t*************************         *************************\n";
 	std::cout << "\t      12 hour clock                      24 hour clock\n";
@@ -83,7 +83,7 @@ int addOneHour(int timeHour, int timeMinute, int timeSecond) {
 	return timeHour, timeMinute, timeSecond;
 }
 
-int addOneMinute(int timeHour, int timeMinute, int timeSecond) {
+int addOneMinute(int timeHour, int &timeMinute, int timeSecond) {
 	timeMinute = timeMinute + 1;
 	std::cout << "\t*************************         *************************\n";
 	std::cout << "\t      12 hour clock                      24 hour clock\n";
@@ -97,7 +97,7 @@ int addOneMinute(int timeHour, int timeMinute, int timeSecond) {
 	return timeHour, timeMinute, timeSecond;
 }
 
-int addOneSecond(int timeHour, int timeMinute, int timeSecond) {
+int addOneSecond(int timeHour, int timeMinute, int &timeSecond) {
 	timeSecond = timeSecond + 1;
 	std::cout << "\t*************************         *************************\n";
 	std::cout << "\t      12 hour clock                      24 hour clock\n";
