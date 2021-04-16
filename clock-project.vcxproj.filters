@@ -18,5 +18,8 @@
     <ClCompile Include="mainclockcode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Debugging-File.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
