@@ -3,7 +3,9 @@
 #include <ctime>
 #include <time.h>
 
-
+int addOneHour(int timeHour, int timeMinute, int timeSecond);
+int addOneMinute(int timeHour, int timeMinute, int timeSecond);
+int addOneSecond(int timeHour, int timeMinute, int timeSecond);
 int display12hours(int& timeHour, int& timeMinute, int& timeSecond);
 int display24hours(int& timeHour, int& timeMinute, int& timeSecond);
 
@@ -12,6 +14,7 @@ int main() {
 	int timeHour;
 	int timeMinute;
 	int timeSecond;
+	int userChoice;
 
 	// This text will display a 12 hour clock and a 24 hour clock.
 	std::cout << "\t*************************         *************************\n";
@@ -31,8 +34,84 @@ int main() {
 	std::cout << "\t\t\t  * 4. Exit           *\n";
 	std::cout << "\t\t\t  *********************\n\n";
 
+	std::cin >> userChoice;
+	
+
+	while (userChoice >= 1 && userChoice <= 3) {
+		// This menu allows the user to select their preferred option
+
+		if (userChoice == 1) {
+			addOneHour(timeHour, timeMinute, timeSecond);
+			
+		}
+		else if (userChoice == 2) {
+			addOneMinute(timeHour, timeMinute, timeSecond);
+			
+		}
+		else if (userChoice == 3) {
+			addOneSecond(timeHour, timeMinute, timeSecond);
+			
+		}
+
+
+		std::cout << "\t\t\tWhat option would you like?\n";
+		std::cout << "\t\t\t  *********************\n";
+		std::cout << "\t\t\t  * 1. Add one hour   *\n";
+		std::cout << "\t\t\t  * 2. Add one minute *\n";
+		std::cout << "\t\t\t  * 3. Add one second *\n";
+		std::cout << "\t\t\t  * 4. Exit           *\n";
+		std::cout << "\t\t\t  *********************\n\n";
+		std::cin >> userChoice;
+
+	}
+
+	std::cout << "The program has ended.\n";
+
 	return 0;
 }
+
+int addOneHour(int timeHour, int timeMinute, int timeSecond) {
+	timeHour = timeHour + 1;
+	std::cout << "\t*************************         *************************\n";
+	std::cout << "\t      12 hour clock                      24 hour clock\n";
+	std::cout << "\t       ";
+	display12hours(timeHour, timeMinute, timeSecond);
+	std::cout << "\t                    ";
+	display24hours(timeHour, timeMinute, timeSecond);
+	std::cout << " \n";
+	std::cout << "\t*************************         *************************\n\n";
+	return timeHour, timeMinute, timeSecond;
+}
+
+int addOneMinute(int timeHour, int timeMinute, int timeSecond) {
+	timeMinute = timeMinute + 1;
+	std::cout << "\t*************************         *************************\n";
+	std::cout << "\t      12 hour clock                      24 hour clock\n";
+	std::cout << "\t       ";
+	display12hours(timeHour, timeMinute, timeSecond);
+	std::cout << "\t                    ";
+	display24hours(timeHour, timeMinute, timeSecond);
+	std::cout << " \n";
+	std::cout << "\t*************************         *************************\n\n";
+
+	return timeHour, timeMinute, timeSecond;
+}
+
+int addOneSecond(int timeHour, int timeMinute, int timeSecond) {
+	timeSecond = timeSecond + 1;
+	std::cout << "\t*************************         *************************\n";
+	std::cout << "\t      12 hour clock                      24 hour clock\n";
+	std::cout << "\t       ";
+	display12hours(timeHour, timeMinute, timeSecond);
+	std::cout << "\t                    ";
+	display24hours(timeHour, timeMinute, timeSecond);
+	std::cout << " \n";
+	std::cout << "\t*************************         *************************\n\n";
+
+	return timeHour, timeMinute, timeSecond;
+}
+
+
 
 int display12hours(int& timeHour, int& timeMinute, int& timeSecond) {
 
