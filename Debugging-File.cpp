@@ -6,8 +6,8 @@
 int addOneHour(int&, int& , int& ); // This function will add 1 hour to the time
 int addOneMinute(int& , int&, int&); // This function will add 1 minute to the time
 int addOneSecond(int&, int&, int&); // This function will add one second to the time
-int display12hours(int&, int&, int& ); // This function will display the time in a 12 hour clock format
-int display24hours(int&, int& , int&); // This function will display the time in a 24 hour clock format
+void display12hours(int&, int&, int& ); // This function will display the time in a 12 hour clock format
+void display24hours(int&, int& , int&); // This function will display the time in a 24 hour clock format
 
 int main() {
 
@@ -126,7 +126,7 @@ int addOneSecond(int &timeHour, int &timeMinute, int &timeSecond) {
 
 
 // This function will display the time in a 12 hour clock format
-int display12hours(int& timeHour, int& timeMinute, int& timeSecond) {
+void display12hours(int& timeHour, int& timeMinute, int& timeSecond) {
 
 	struct tm tempLocalTime;
 	time_t localTime = time(0);
@@ -161,14 +161,11 @@ int display12hours(int& timeHour, int& timeMinute, int& timeSecond) {
 	else {
 		std::cout << timeHour << ":" << timeMinute << ":" << timeSecond << " AM";
 	}
-	return timeHour, timeMinute, timeSecond;
-
-
 }
 
 
 // This function will display the time in a 24 hour clock format
-int display24hours(int& timeHour, int& timeMinute, int& timeSecond) {
+void display24hours(int& timeHour, int& timeMinute, int& timeSecond) {
 
 	struct tm tempLocalTime;
 	time_t localTime = time(0);
@@ -178,7 +175,5 @@ int display24hours(int& timeHour, int& timeMinute, int& timeSecond) {
 	timeSecond = tempLocalTime.tm_sec; // this variable is storing the current second
 
 	std::cout << timeHour << ":" << timeMinute << ":" << timeSecond; // This statement will display the time in a 24 hour format
-
-	return timeHour, timeMinute, timeSecond;
 
 }
