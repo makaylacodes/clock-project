@@ -1,9 +1,5 @@
-/*
-Name: Makayla Anderson-Tucker
-Assignment: 3-1 Project 1
-*/
 
-<<<<<<< HEAD
+
 #include <iostream>
 #include <string>
 #include <ctime>
@@ -219,5 +215,4 @@ void display24hours(int& timeHour, int& timeMinute, int& timeSecond) {
 	std::cout << timeHour << ":" << timeMinute << ":" << timeSecond; // This statement will display the time in a 24 hour format
 
 }
-=======
->>>>>>> refs/remotes/origin/master
+
