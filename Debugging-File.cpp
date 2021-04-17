@@ -89,7 +89,7 @@ int addOneHour(int &timeHour, int &timeMinute, int &timeSecond) {
 	display24hours(timeHour, timeMinute, timeSecond);
 	std::cout << " \n";
 	std::cout << "\t*************************         *************************\n\n";
-	return timeHour, timeMinute, timeSecond;
+	return timeHour;
 }
 
 // This function will add 1 to the minute variable and display the updated time format.
@@ -104,7 +104,7 @@ int addOneMinute(int &timeHour, int &timeMinute, int &timeSecond) {
 	std::cout << " \n";
 	std::cout << "\t*************************         *************************\n\n";
 
-	return timeHour, timeMinute, timeSecond;
+	return timeMinute;
 }
 
 
@@ -120,7 +120,7 @@ int addOneSecond(int &timeHour, int &timeMinute, int &timeSecond) {
 	std::cout << " \n";
 	std::cout << "\t*************************         *************************\n\n";
 
-	return timeHour, timeMinute, timeSecond;
+	return timeSecond;
 }
 
 
@@ -146,6 +146,12 @@ int display12hours(int& timeHour, int& timeMinute, int& timeSecond) {
 	// hour is greater than 12
 	else if (timeHour > 12) {
 		timeHour -= 12;
+		std::cout << timeHour << ":" << timeMinute << ":" << timeSecond << " PM ";
+
+	}
+
+	//This else if statement will print 12pm when it is 12pm
+	else if (timeHour == 12) {
 		std::cout << timeHour << ":" << timeMinute << ":" << timeSecond << " PM ";
 
 	}
