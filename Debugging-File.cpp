@@ -1,9 +1,3 @@
-/*
-Name: Makayla Anderson-Tucker
-Assignment: 3-1 Project 1
-*/
-
-<<<<<<< HEAD
 #include <iostream>
 #include <string>
 #include <ctime>
@@ -11,7 +5,7 @@ Assignment: 3-1 Project 1
 
 
 
-void addOneHour(int&, int&, int&); // This function will add 1 hour to the time
+void addOneHour(int & , int&, int&); // This function will add 1 hour to the time
 int addOneMinute(int&, int&, int&); // This function will add 1 minute to the time
 int addOneSecond(int&, int&, int&); // This function will add one second to the time
 void display12hours(int&, int&, int&); // This function will display the time in a 12 hour clock format
@@ -44,7 +38,7 @@ int main() {
 	std::cout << " \n";
 	std::cout << "\t*************************         *************************\n\n";
 
-
+	
 	// This text will display a menu with options for altering the time. The user will input their selection
 	std::cout << "\t\t\tWhat option would you like?\n";
 	std::cout << "\t\t\t  *********************\n";
@@ -55,32 +49,32 @@ int main() {
 	std::cout << "\t\t\t  *********************\n\n";
 
 	std::cin >> userChoice;
-
+	
 	// This will loop the program when the user selects options 1-3 and quits when the user enters 4 or a number
 	// outside of the selection
 	while (userChoice >= 1 && userChoice <= 3) {
 
-
-		// if user chooses 1, 1 will be added to the hour variable and both clock formats will be displayed
+		
+	// if user chooses 1, 1 will be added to the hour variable and both clock formats will be displayed
 		if (userChoice == 1) {
-
+			
 			addOneHour(timeHour, timeMinute, timeSecond);
-
+			
 		}
 
-		// if user chooses 2, 1 will be added to the minute variable and both clock formats will be displayed
+	// if user chooses 2, 1 will be added to the minute variable and both clock formats will be displayed
 		else if (userChoice == 2) {
 			addOneMinute(timeHour, timeMinute, timeSecond);
-
+			
 		}
 
 		// if user chooses 3, 1 will be added to the second variable and both clock formats will be displayed
 		else if (userChoice == 3) {
 			addOneSecond(timeHour, timeMinute, timeSecond);
-
+			
 		}
 
-		// The menu is displayed again and the user has to input their selection
+	// The menu is displayed again and the user has to input their selection
 		std::cout << "\t\t\tWhat option would you like?\n";
 		std::cout << "\t\t\t  *********************\n";
 		std::cout << "\t\t\t  * 1. Add one hour   *\n";
@@ -92,29 +86,29 @@ int main() {
 
 	}
 
-
+	
 	std::cout << "The program has ended.\n";
 
 	return 0;
 }
 
 // This function will add 1 to the hour variable and display the updated time format.
-void addOneHour(int& timeHour, int& timeMinute, int& timeSecond) {
+void addOneHour(int &timeHour,int &timeMinute,int &timeSecond) {
 	timeHour = timeHour + 1;
 	std::cout << "\t*************************         *************************\n";
 	std::cout << "\t      12 hour clock                      24 hour clock\n";
 	std::cout << "\t       ";
-	display12hours(timeHour, timeMinute, timeSecond);
+	display12hours(timeHour, timeMinute, timeSecond); 
 	std::cout << "\t                    ";
 	display24hours(timeHour, timeMinute, timeSecond);
 	std::cout << " \n";
 	std::cout << "\t*************************         *************************\n\n";
-
+	
 }
 
 // This function will add 1 to the minute variable and display the updated time format.
 int addOneMinute(int& timeHour, int& timeMinute, int& timeSecond) {
-
+	
 	timeMinute = timeMinute + 1;
 	std::cout << "\t*************************         *************************\n";
 	std::cout << "\t      12 hour clock                      24 hour clock\n";
@@ -132,7 +126,7 @@ int addOneMinute(int& timeHour, int& timeMinute, int& timeSecond) {
 // This function will add 1 to the second variable and display the updated time format.
 int addOneSecond(int& timeHour, int& timeMinute, int& timeSecond) {
 
-
+	
 	timeSecond = timeSecond + 1;
 	std::cout << "\t*************************         *************************\n";
 	std::cout << "\t      12 hour clock                      24 hour clock\n";
@@ -149,7 +143,7 @@ int addOneSecond(int& timeHour, int& timeMinute, int& timeSecond) {
 
 
 // This function will display the time in a 12 hour clock format
-void display12hours(int& timeHour, int& timeMinute, int& timeSecond) {
+void display12hours(int &timeHour, int &timeMinute, int &timeSecond) {
 
 	// This if statement will reset the clock to 0, if the hour is greater than 24.
 	if (timeHour > 24) {
@@ -173,13 +167,13 @@ void display12hours(int& timeHour, int& timeMinute, int& timeSecond) {
 		std::cout << timeHour << ":" << timeMinute << ":" << timeSecond << " AM ";
 
 	}
-
-
+	
+	
 
 	//This else if statement will convert the 24 hour format to the 12 hour format, if the 
 	// hour is greater than 12
 	else if (timeHour > 12) {
-
+		
 		std::cout << timeHour - 12 << ":" << timeMinute << ":" << timeSecond << " PM ";
 
 	}
@@ -189,18 +183,18 @@ void display12hours(int& timeHour, int& timeMinute, int& timeSecond) {
 		std::cout << timeHour << ":" << timeMinute << ":" << timeSecond << " PM ";
 
 	}
-
+	
 	//This else statement will display the time in a 12 hour format because the hour is 
 	// less than 12
 	else if (timeHour >= 1 && timeHour < 12) {
 		std::cout << timeHour << ":" << timeMinute << ":" << timeSecond << " AM";
 	}
-
+	
 }
 
 
 // This function will display the time in a 24 hour clock format
-void display24hours(int& timeHour, int& timeMinute, int& timeSecond) {
+void display24hours(int &timeHour, int &timeMinute, int &timeSecond) {
 
 	// This if statement will reset the clock to 0, if the hour is greater than 24.
 	if (timeHour > 24) {
@@ -219,5 +213,3 @@ void display24hours(int& timeHour, int& timeMinute, int& timeSecond) {
 	std::cout << timeHour << ":" << timeMinute << ":" << timeSecond; // This statement will display the time in a 24 hour format
 
 }
-=======
->>>>>>> refs/remotes/origin/master
