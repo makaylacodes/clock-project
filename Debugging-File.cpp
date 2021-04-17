@@ -22,7 +22,7 @@ int main() {
 	int userChoice; // this variable will read user input for the menu options
 	// This text will display a 12 hour clock and a 24 hour clock.
 
-	struct tm tempLocalTime;
+	struct tm tempLocalTime; //This is a time struct and will give user the local time
 	time_t localTime = time(0);
 	localtime_s(&tempLocalTime, &localTime);
 	timeHour = tempLocalTime.tm_hour; // This variable is storing the current hour
@@ -145,15 +145,22 @@ int addOneSecond(int& timeHour, int& timeMinute, int& timeSecond) {
 // This function will display the time in a 12 hour clock format
 void display12hours(int &timeHour, int &timeMinute, int &timeSecond) {
 
+	// This if statement will reset the clock to 0, if the hour is greater than 24.
 	if (timeHour > 24) {
 		timeHour = 0;
 	}
+
+	//This if statement will reset the minutes to 0, if the minutes are greater than 60.
 	if (timeMinute > 59) {
 		timeMinute = 0;
 	}
+
+	//This if statement will reset the seconds to 0, if the seconds are greater than 60.
 	if (timeSecond > 59) {
 		timeSecond = 0;
 	}
+
+	//This if statement will include an AM statement when it is midnight.
 	if (timeHour == 24)
 	{
 		timeHour = 0;
@@ -189,12 +196,17 @@ void display12hours(int &timeHour, int &timeMinute, int &timeSecond) {
 // This function will display the time in a 24 hour clock format
 void display24hours(int &timeHour, int &timeMinute, int &timeSecond) {
 
+	// This if statement will reset the clock to 0, if the hour is greater than 24.
 	if (timeHour > 24) {
 		timeHour = 0;
 	}
+
+	//This if statement will reset the minutes to 0, if the minutes are greater than 60.
 	if (timeMinute > 59) {
 		timeMinute = 0;
 	}
+
+	//This if statement will reset the seconds to 0, if the seconds are greater than 60.
 	if (timeSecond > 59) {
 		timeSecond = 0;
 	}
