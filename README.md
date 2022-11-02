@@ -1,44 +1,46 @@
 # Project Name
-An application that allows users to adjust time on clock.
+Developed a console-based app that retrieves the current time in the user's location. Once retrieved, users have options to manipulate the displayed time.
 
 
-## General Information
-- Provide general information about your project here.
+## Project uses following C++ concepts:
+- Developed a console-based app that retrieves the current time in the user's location. Once retrieved, users have options to manipulate the displayed time. 
 - What problem does it (intend to) solve?
-- What is the purpose of your project?
+- The purpose of this project was to learn
 - Why did you undertake it?
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
 
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+## Functions
+<ol>
+  <li>void addOneHour(int&, int&, int&) </li>
+  
+  - This function will add 1 hour to the time
+  <li>int addOneMinute(int&, int&, int&)</li>
+  
+  - This function will add 1 minute to the time
+  <li>int addOneSecond(int&, int&, int&)</li>
+  
+  - This function will add one second to the time
+  <li>void display12hours(int&, int&, int&)</li>
+  
+  - This function will display the time in a 12 hour clock format
+  <li>void display24hours(int&, int&, int&)</li>
+  
+  - This function will display the time in a 24 hour clock format
+</ol>
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+![clock](https://user-images.githubusercontent.com/63388515/199527168-8eff301b-3192-4333-ad7c-fbb9f1ea92b5.gif)
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
-
-
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-`write-your-code-here`
-
+To run the app, clone this repository. 
+Open the terminal in your preffered IDE that has a compiler for C++
+Run the debugger and the project should open in the console.
 
 ## Project Status
 Project is: _complete_ 
-
-
 
 ## Acknowledgements
 - This project was based on CS 210 at SNHU.
