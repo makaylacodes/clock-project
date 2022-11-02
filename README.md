@@ -1,11 +1,11 @@
-# Project Name
+# Clock App
 Developed a console-based app that retrieves the current time in the user's location. Once retrieved, users have options to manipulate the displayed time.
 
 
 ## Project uses following C++ concepts:
-- Developed a console-based app that retrieves the current time in the user's location. Once retrieved, users have options to manipulate the displayed time. 
-- What problem does it (intend to) solve?
-- The purpose of this project was to learn
+- Functions 
+- If/Else
+- Dynamic Programming
 - Why did you undertake it?
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
@@ -14,19 +14,19 @@ Developed a console-based app that retrieves the current time in the user's loca
 <ol>
   <li>void addOneHour(int&, int&, int&) </li>
   
-  - This function will add 1 hour to the time
+  - This function adds 1 hour to the time.
   <li>int addOneMinute(int&, int&, int&)</li>
   
-  - This function will add 1 minute to the time
+  - This function adds 1 minute to the time.
   <li>int addOneSecond(int&, int&, int&)</li>
   
-  - This function will add one second to the time
+  - This function adds one second to the time.
   <li>void display12hours(int&, int&, int&)</li>
   
-  - This function will display the time in a 12 hour clock format
+  - This function displays the time in a 12 hour clock format.
   <li>void display24hours(int&, int&, int&)</li>
   
-  - This function will display the time in a 24 hour clock format
+  - This function displays the time in a 24 hour clock format.
 </ol>
 
 
@@ -36,7 +36,7 @@ Developed a console-based app that retrieves the current time in the user's loca
 
 ## Setup
 To run the app, clone this repository. 
-Open the terminal in your preffered IDE that has a compiler for C++
+Open the terminal in your preferred IDE that has a compiler for C++.
 Run the debugger and the project should open in the console.
 
 ## Project Status
