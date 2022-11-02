@@ -35,9 +35,13 @@ Developed a console-based app that retrieves the current time in the user's loca
 
 
 ## Setup
-To run the app, clone this repository. 
-Open the terminal in your preferred IDE that has a compiler for C++.
-Run the debugger for the file mainclockcode.cpp and the app should open in the console.
+<ol>
+<li> To run the app, clone this repository. </li>
+
+<li> Open the terminal in your preferred IDE that has a compiler for C++.</li>
+
+<li> Run the debugger for the file mainclockcode.cpp and the app should open in the console.</li>
+</ol>
 
 ## Project Status
 Project is: _complete_ 
